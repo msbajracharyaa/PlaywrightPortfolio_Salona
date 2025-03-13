@@ -1,0 +1,19 @@
+{
+  "name": "playwright-portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@playwright/test": "^1.51.0",
+    "dotenv": "^16.4.7",
+    "prettier": "^3.5.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10"
+  }
+}
