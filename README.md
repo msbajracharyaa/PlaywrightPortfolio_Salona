@@ -28,25 +28,36 @@ Ensure you have the following installed before setting up Playwright:
     npx playwright install
    ```
 **Running Tests**
+The test are usuaky categorized in such a way that they might or moght not need login session. Currently there's 2 test in this repo
+- e2e-test > addToCart [this is test with logged in user]
+- catogory [this doesn't need login]
+- Other test [IN PROGRESS]
 
-1. To run all tests:
+1. To run tests that needs login as first step:
    ```sh
-   npx playwright test
+   RUN_AUTH_SETUP=true npx playwright test --project=authenticated
+   ```
+2. To run tests that needs login as first step:
+   ```sh
+   RUN_AUTH_SETUP=false npx playwright test --project=unauthenticated
    ```
 
 2. To run tests in headed mode (see the browser UI):
    ```sh
-   npx playwright test --headed
+   RUN_AUTH_SETUP=false npx playwright test --project=unauthenticated --headed
    ```
 
-3. To run a specific test file:
+3. To run a specific test file that needs login as first step :
    ```sh
-   npx playwright test tests/example.spec.js
+   RUN_AUTH_SETUP=true npx playwright tests/example.spec.js --project=authenticated
    ```
-
+4. To run a specific test file that doesn't need login as first step :
+   ```sh
+   RUN_AUTH_SETUP=false npx playwright tests/example.spec.js --project=unauthenticated
+   ```
 4. To generate an HTML report after test execution:
    ```sh
-   npx playwright test --reporter=html
+   RUN_AUTH_SETUP=false npx playwright tests --project=unauthenticated --reporter=html
    ```
    - Open the report using:
      ```sh
