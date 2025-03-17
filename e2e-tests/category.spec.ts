@@ -1,7 +1,6 @@
 import {test, expect} from '@playwright/test'
 import { HomePage } from '../page-objects/LandingPage'
 import { Locators } from '../utils/locators'
-
 test.describe('Open category menu', () => {
     let landingPage: HomePage
 

@@ -14,8 +14,8 @@ test.describe.skip('Login normal user', () => {
 
     test('login with username and password', async ({ page }) => {
         await page.locator(Locators.homePage.SignInButton).click()
-        await page.fill(Locators.loginPage.UsernameField, 'customer@practicesoftwaretesting.com')
-        await page.fill(Locators.loginPage.PasswordField, 'welcome01')
+        await page.fill(Locators.loginPage.UsernameField, process.env.USER1!)
+        await page.fill(Locators.loginPage.PasswordField, process.env.PASSWORD!)
         await page.locator(Locators.loginPage.LoginButton).click()
 
         await expect(page.locator(Locators.loggedInUser.PageTitle)).toContainText ('My account')
