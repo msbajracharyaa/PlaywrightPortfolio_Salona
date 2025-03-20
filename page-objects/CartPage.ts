@@ -19,7 +19,4 @@ export class CartPage {
         expect(bgColor).toContain(color);
     }
 
-    
-
-    
 }

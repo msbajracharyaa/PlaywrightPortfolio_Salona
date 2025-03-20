@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:unauthorized": "RUN_AUTH_SETUP=false npx playwright test e2e-after-logins/ --project=unauthenticated --reporter=html",
+    "test:authorized": "RUN_AUTH_SETUP=true npx playwright test e2e-after-logins/ --project=authenticated --reporter=html",
+    "test:all:parallel": "npx playwright test --shard=1/2 & npx playwright test --shard=2/2 --reporter=html"
   },
   "author": "",
   "license": "ISC",

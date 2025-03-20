@@ -15,7 +15,8 @@ export const Locators = {
         FilterLists : '',
         ByBrandFilterCategory : 'text=By brand:',
         ForgeFlexBrand: 'text= ForgeFlex Tools',
-        MightyCraft : 'text= MightyCraft Hardware'
+        MightyCraft : 'text= MightyCraft Hardware',
+        BannerImage: '//img[@alt="Banner"]'
     },
     
     loginPage:{

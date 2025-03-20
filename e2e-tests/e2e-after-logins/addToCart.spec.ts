@@ -3,9 +3,8 @@ import { HomePage } from '../../page-objects/LandingPage'
 import { Locators } from '../../utils/locators'
 import { LoginPage } from '../../page-objects/LoginPage'
 import { BillingAddressPage } from '../../page-objects/BillingAddressPage';
-import { CartPage } from '../../page-objects/CartPage';
 
-test.describe.only('Complete one whole order step', () => {
+test.describe('Complete one whole order step', () => {
     let landingPage: HomePage
     let loginPage: LoginPage
     let billingAddressPage: BillingAddressPage
